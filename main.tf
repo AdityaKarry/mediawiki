@@ -105,7 +105,7 @@ resource "azurerm_linux_virtual_machine" "linuxvm" {
   resource_group_name   = azurerm_resource_group.rgtest.name
   network_interface_ids = [azurerm_network_interface.nic.id]
   computer_name         = "ubuntutest"
-  admin_username        = "buildaz"
+  admin_username        = "build"
   size                  = "Standard_B2ats_v2"
 
   custom_data = filebase64("customdata.tpl")
@@ -124,7 +124,7 @@ resource "azurerm_linux_virtual_machine" "linuxvm" {
   }
 
   admin_ssh_key {
-    username   = "buildaz"
+    username   = "build"
     public_key = file("~/.ssh/build.pub")
   }
 

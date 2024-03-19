@@ -6,7 +6,7 @@ sleep 10;
 ansible-galaxy collection install community.mysql
 
 sleep 30;
-cat << EOG >> /home/buildaz/vars.yml
+cat << EOG >> /home/build/vars.yml
 mediawiki_url: https://releases.wikimedia.org/mediawiki/1.41/mediawiki-1.41.0.tar.gz
 tmp_dir: /tmp
 mediawiki_path: /var/lib/mediawiki
@@ -19,7 +19,7 @@ db_password: #password#
 EOG
 
 sleep 5;
-cat << EOF >> /home/buildaz/deploy.yml
+cat << EOF >> /home/build/deploy.yml
 ## Media Wiki Installation
 
 - hosts: localhost
@@ -101,4 +101,4 @@ EOF
 
 sleep 20;
 inv="127.0.0.1"
-ansible-playbook -i $inv /home/buildaz/deploy.yml
+ansible-playbook -i $inv /home/build/deploy.yml
