@@ -1,0 +1,8 @@
+resource_group_name         = "test"
+resource_group_location     = "Central India"
+virtual_network_name        = "vnet_test"
+subnet_name                 = "subnet_test"
+public_ip_name              = "publicip_test"
+network_security_group_name = "nsg_test"
+network_interface_name      = "nic_test"
+linux_virtual_machine_name  = "ubuntu_test"
